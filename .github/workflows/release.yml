@@ -12,7 +12,8 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v2
       - name: PR Tests
-        uses: ./.github/workflows/pull_request
+        run: npm ci
+        run: npm run test:prod
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
