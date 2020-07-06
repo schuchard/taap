@@ -12,7 +12,7 @@
   "author": "kevin schuchard <schuchard.kevin@gmail.com>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/schuchard/taap.git"
   },
   "license": "MIT",
   "engines": {
