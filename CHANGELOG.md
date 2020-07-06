@@ -1,3 +1,10 @@
+# [1.0.0-beta.6](https://github.com/schuchard/taap/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2020-07-06)
+
+
+### Features
+
+* fix build command ([8eebde6](https://github.com/schuchard/taap/commit/8eebde6b071130355e9000140cf6f9f3f9adf4d0))
+
 # [1.0.0-beta.5](https://github.com/schuchard/taap/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2020-07-06)
 
 
