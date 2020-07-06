@@ -1,8 +1,14 @@
 {
   "name": "taap",
-  "version": "0.0.0-development",
+  "version": "1.0.0-beta.1",
   "description": "A Typescript library for determining and coercing unkown Javascript types.",
-  "keywords": ["javascript", "typescript", "type", "typeof", "assertion"],
+  "keywords": [
+    "javascript",
+    "typescript",
+    "type",
+    "typeof",
+    "assertion"
+  ],
   "main": "dist/taap.umd.js",
   "module": "dist/taap.es5.js",
   "typings": "dist/types/taap.d.ts",
