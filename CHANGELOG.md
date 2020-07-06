@@ -1,3 +1,10 @@
+# [1.0.0-beta.4](https://github.com/schuchard/taap/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2020-07-06)
+
+
+### Features
+
+* **ci:** include build step in release ([0dd3952](https://github.com/schuchard/taap/commit/0dd3952382fc062bf4f1eb284d2e6d7c67d8b607))
+
 # [1.0.0-beta.3](https://github.com/schuchard/taap/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2020-07-06)
 
 
