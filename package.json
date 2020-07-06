@@ -1,6 +1,6 @@
 {
   "name": "taap",
-  "version": "1.0.0-beta.6",
+  "version": "1.0.0-beta.7",
   "description": "A Typescript library for determining and coercing unknown Javascript types.",
   "keywords": [
     "javascript",

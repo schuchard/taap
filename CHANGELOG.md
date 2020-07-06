@@ -1,3 +1,10 @@
+# [1.0.0-beta.7](https://github.com/schuchard/taap/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2020-07-06)
+
+
+### Features
+
+* **ci:** dist files ([ed3e039](https://github.com/schuchard/taap/commit/ed3e039b4de022b7c9f43991faa536c5d04260b3))
+
 # [1.0.0-beta.6](https://github.com/schuchard/taap/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2020-07-06)
 
 
