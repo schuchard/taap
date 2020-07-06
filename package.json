@@ -13,7 +13,7 @@
   "module": "dist/taap.es5.js",
   "typings": "dist/types/taap.d.ts",
   "files": [
-    "./dist"
+    "dist/**"
   ],
   "author": "kevin schuchard <schuchard.kevin@gmail.com>",
   "repository": {
