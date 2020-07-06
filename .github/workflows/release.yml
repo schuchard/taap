@@ -15,7 +15,7 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm run test:prod
-      - run: npm build
+      - run: npm run build
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
