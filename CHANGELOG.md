@@ -1,3 +1,11 @@
+# [1.0.0-beta.5](https://github.com/schuchard/taap/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2020-07-06)
+
+
+### Features
+
+* build ([31a5ddb](https://github.com/schuchard/taap/commit/31a5ddbc0956819e4d209fc3f3ffa62cfd1ef360))
+* **ci:** npm changes ([9d546cf](https://github.com/schuchard/taap/commit/9d546cf9d28a2ad6917dda0ba4424af2ca9c542f))
+
 # [1.0.0-beta.4](https://github.com/schuchard/taap/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2020-07-06)
 
 
