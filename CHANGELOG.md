@@ -1,3 +1,10 @@
+# [1.0.0-beta.3](https://github.com/schuchard/taap/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2020-07-06)
+
+
+### Features
+
+* **ci:** add new glob pattern for dist folder ([b22dc8a](https://github.com/schuchard/taap/commit/b22dc8a16dbd11b184c4b8879d1297d9c8b28627))
+
 # [1.0.0-beta.2](https://github.com/schuchard/taap/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2020-07-06)
 
 
