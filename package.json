@@ -134,19 +134,13 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
-      "@semantic-release/npm",
       [
-        "@semantic-release/git",
+        "@semantic-release/npm",
         {
-          "assets": [
-            "CHANGELOG.md",
-            "package.json",
-            "package-lock.json",
-            "npm-shrinkwrap.json",
-            "dist/**"
-          ]
+          "pkgRoot": "dist"
         }
-      ]
+      ],
+      "@semantic-release/git"
     ]
   }
 }
