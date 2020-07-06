@@ -1,8 +1,8 @@
 {
   "name": "taap",
   "version": "0.0.0-development",
-  "description": "",
-  "keywords": [],
+  "description": "A Typescript library for determining and coercing unkown Javascript types.",
+  "keywords": ["javascript", "typescript", "type", "typeof", "assertion"],
   "main": "dist/taap.umd.js",
   "module": "dist/taap.es5.js",
   "typings": "dist/types/taap.d.ts",
@@ -29,10 +29,7 @@
     "deploy-docs": "ts-node tools/gh-pages-publish",
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "commit": "git-cz",
-    "semantic-release": "semantic-release",
-    "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
-    "precommit": "lint-staged",
-    "travis-deploy-once": "travis-deploy-once"
+    "semantic-release": "semantic-release"
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [
@@ -82,9 +79,17 @@
       "@commitlint/config-conventional"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "devDependencies": {
     "@commitlint/cli": "^9.0.1",
     "@commitlint/config-conventional": "^9.0.1",
+    "@semantic-release/changelog": "5.0.1",
+    "@semantic-release/git": "9.0.0",
     "@types/jest": "^26.0.3",
     "@types/node": "^14.0.14",
     "colors": "^1.4.0",
@@ -117,5 +122,14 @@
     "tslint-config-standard": "^9.0.0",
     "typedoc": "^0.17.8",
     "typescript": "^3.9.6"
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ]
   }
 }
