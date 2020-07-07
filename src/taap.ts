@@ -7,6 +7,7 @@ export type TaapType =
   | 'Function'
   | 'Boolean'
   | 'Number'
+  | 'BigInt'
   | 'Null'
   | 'Undefined';
 
@@ -169,6 +170,21 @@ export function isBoolean(val: any): val is boolean {
  */
 export function isNumber(val: any): val is number {
   return getType(val) === 'Number';
+}
+
+/**
+ * Determine if argument is a `BigInt`.
+ *
+ * ```ts
+ * const maybeBigInt: unknown = BigInt(42);
+ *
+ * if (isBigInt(maybeBigInt)) {
+ *   maybeBigInt === 42n;
+ * }
+ * ```
+ */
+export function isBigInt(val: any): val is BigInt {
+  return getType(val) === 'BigInt';
 }
 
 /**

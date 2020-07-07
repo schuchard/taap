@@ -1,6 +1,6 @@
 # Type Assertion And Predicate (`Taap`)
 
-A zero dependency Typescript type checking library that coerces unknown values.
+A zero dependency Typescript type checking library that coerces unknown values. More concise and accurate than `typeof` checks or other similar type checking methods.
 
 <h3 align="center">
   <a href="https://schuchard.github.io/taap/" target="_blank">📚 Docs<a>
@@ -48,7 +48,7 @@ import { isArray } from 'taap';
 const maybeArray: unknown = [];
 
 if (typeof maybeArray === 'array') {
-  🚫 typeof [] !== 'object
+  🚫 typeof [] === 'object'
 } else if (isArray(maybeArray)) {
   ✅ maybeArray.push(1);
 }
@@ -83,6 +83,7 @@ Fixed return type:
 - `isRegExp()`
 - `isBoolean()`
 - `isNumber()`
+- `isBigInt()`
 - `isNull()`
 - `isUndefined()`
 

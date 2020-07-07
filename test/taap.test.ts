@@ -7,6 +7,7 @@ import {
   isFunction,
   isBoolean,
   isNumber,
+  isBigInt,
   isNull,
   isUndefined,
   getType,
@@ -147,6 +148,23 @@ describe('isNumber', () => {
   });
 });
 
+describe('isBigInt', () => {
+  it('should return a true if a BigInt', () => {
+    expect(isBigInt(BigInt(42))).toBe(true);
+  });
+
+  it('should assert the type predicate and compile', () => {
+    const maybeBigInt: unknown = BigInt(42);
+
+    if (isBigInt(maybeBigInt)) {
+      // todo target tests to ES2020 to use BigInt's: `42n`
+      expect(maybeBigInt.toString()).toEqual('42');
+    }
+
+    expect.assertions(1);
+  });
+});
+
 describe('isNull', () => {
   it('should return a true if an Null', () => {
     expect(isNull(null)).toBe(true);
@@ -196,9 +214,11 @@ describe('getType', () => {
     ${'Boolean'}   | ${false}
     ${'Boolean'}   | ${!!1}
     ${'Number'}    | ${1}
+    ${'Number'}    | ${2_000}
     ${'Number'}    | ${0.4}
     ${'Null'}      | ${null}
     ${'Undefined'} | ${undefined}
+    ${'BigInt'}    | ${BigInt(9007199254740991)}
     ${'Function'}  | ${() => ({})}
     ${'Function'} | ${function testFunc() {
   return false;
