@@ -102,10 +102,10 @@ describe('isFunction', () => {
   });
 
   it('should assert the type predicate and compile', () => {
-    const maybeFunc: unknown = (x: any) => x;
+    const maybeFunction: unknown = (x: any) => x;
 
-    if (isFunction<(x: number) => number>(maybeFunc)) {
-      expect(maybeFunc(42)).toEqual(42);
+    if (isFunction<(x: number) => number>(maybeFunction)) {
+      expect(maybeFunction(42)).toEqual(42);
     }
 
     expect.assertions(1);
