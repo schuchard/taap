@@ -1,3 +1,10 @@
+# [1.0.0-beta.8](https://github.com/schuchard/taap/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2020-07-07)
+
+
+### Bug Fixes
+
+* **object:** extend from Record ([6c7e60e](https://github.com/schuchard/taap/commit/6c7e60e00587966e2ff3424e20f7495e094eee3d))
+
 # [1.0.0-beta.7](https://github.com/schuchard/taap/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2020-07-06)
 
 
