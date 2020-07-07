@@ -1,3 +1,18 @@
+## [1.0.1](https://github.com/schuchard/taap/compare/v1.0.0...v1.0.1) (2020-07-07)
+
+
+### Bug Fixes
+
+* **ci:** doc deploy ([758b817](https://github.com/schuchard/taap/commit/758b8170580c358047045ce286dd76c89b39ca09))
+* **ci:** doc deploy ([1bf1983](https://github.com/schuchard/taap/commit/1bf19831ad741a44fe4bcffa973c55d99e0ebff0))
+* **ci:** docs deploy ([4897c9a](https://github.com/schuchard/taap/commit/4897c9a58bbcc178d39c1bdfa0d46d94689a1f94))
+* **ci:** docs deploy ([0815857](https://github.com/schuchard/taap/commit/08158573c064acf362bf18ef5e0c56420ea4424b))
+* **ci:** docs deploy ([38bb42e](https://github.com/schuchard/taap/commit/38bb42e1bf0cc33016f07421e29563c08689557f))
+* **ci:** docs deploy ([fe9e070](https://github.com/schuchard/taap/commit/fe9e070d0d82082e5d03014b89f266f56c2d0010))
+* **ci:** docs deploy ([0adc318](https://github.com/schuchard/taap/commit/0adc318383b7667b90b00ff6d369969517b1341d))
+* **ci:** docs deploy ([e154590](https://github.com/schuchard/taap/commit/e1545906355463bf41336e1619e4d395f836fe89))
+* **ci :** docs deploy ([0a0fe3f](https://github.com/schuchard/taap/commit/0a0fe3f42217ad78bf1f8bdac56642a4e265c1ab))
+
 # 1.0.0 (2020-07-07)
 
 
