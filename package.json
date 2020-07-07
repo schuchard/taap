@@ -16,6 +16,7 @@
     "dist/**"
   ],
   "author": "kevin schuchard <schuchard.kevin@gmail.com>",
+  "homepage": "https://schuchard.github.io/taap/",
   "repository": {
     "type": "git",
     "url": "https://github.com/schuchard/taap.git"
