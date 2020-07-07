@@ -1,3 +1,11 @@
+# 1.0.0 (2020-07-07)
+
+
+### Features
+
+* api, tests, ci/cd scripts, docs ([0badc6d](https://github.com/schuchard/taap/commit/0badc6df863314e3ace04ce4b1ce848a550d52b4))
+* init and update project, add src files and specs ([6d6cc15](https://github.com/schuchard/taap/commit/6d6cc15767bfbfef82c2bda1de0d78843fc76650))
+
 # [1.0.0-beta.10](https://github.com/schuchard/taap/compare/v1.0.0-beta.9...v1.0.0-beta.10) (2020-07-07)
 
 
