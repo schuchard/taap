@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/schuchard/taap/compare/v1.0.3...v1.1.0) (2020-07-07)
+
+
+### Features
+
+* add BigInt support ([a8f934c](https://github.com/schuchard/taap/commit/a8f934c9e1b54cc2eec2c62a77c930e0431d8522))
+
 ## [1.0.3](https://github.com/schuchard/taap/compare/v1.0.2...v1.0.3) (2020-07-07)
 
 
