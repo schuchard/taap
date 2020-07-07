@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/schuchard/taap/compare/v1.0.2...v1.0.3) (2020-07-07)
+
+
+### Bug Fixes
+
+* add homepage ([ca146ac](https://github.com/schuchard/taap/commit/ca146ac2cb89ca8cf86748bb5f08187a1c085747))
+
 ## [1.0.2](https://github.com/schuchard/taap/compare/v1.0.1...v1.0.2) (2020-07-07)
 
 
