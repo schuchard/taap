@@ -13,21 +13,16 @@ jobs:
       - uses: actions/setup-node@v2-beta
         with:
           node-version: 12
-      - name: Test
       - run: npm ci
       - run: npm run test:prod
-      - name: Build
-        run: npm run build
+      - run: npm run build
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
-      - name: Deploy Docs
       - uses: peaceiris/actions-gh-pages@v3.6.1
         if: contains(github.ref, 'master')
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
-
-
