@@ -24,7 +24,7 @@ export function isArray<T = any>(val: any): val is Array<T> {
  * @param val
  * @returns boolean
  */
-export function isObject<T = Record<string, any>>(val: any): val is T {
+export function isObject<T extends Record<string, any>>(val: any): val is T {
   return callToString(val) === 'Object';
 }
 
