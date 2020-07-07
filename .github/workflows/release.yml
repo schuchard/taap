@@ -14,8 +14,8 @@ jobs:
         with:
           node-version: 12
       - name: Test
-        run: npm ci
-        run: npm run test:prod
+      - run: npm ci
+      - run: npm run test:prod
       - name: Build
         run: npm run build
       - name: Release
@@ -33,9 +33,9 @@ jobs:
       - uses: actions/setup-node@v2-beta
         with:
           node-version: 12
-      - name: Deploy docs
-        run: npm ci
-        run: npm run docs:deploy
+      - run: npm ci
+      - name: Build Docs
+      - run: npm run docs:deploy
       - uses: peaceiris/actions-gh-pages@v3.6.1
         if: contains(github.ref, 'master')
         with:
