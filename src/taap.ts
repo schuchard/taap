@@ -1,8 +1,17 @@
-// Import here Polyfills if needed. Recommended core-js (npm i -D core-js)
-// import "core-js/fn/array.find"
-// ...
-export function callToString(v: any) {
-  return Object.prototype.toString.call(v).slice(8, -1);
+export type TaapType =
+  | 'Array'
+  | 'Object'
+  | 'String'
+  | 'Date'
+  | 'RegExp'
+  | 'Function'
+  | 'Boolean'
+  | 'Number'
+  | 'Null'
+  | 'Undefined';
+
+export function getType(v: any) {
+  return Object.prototype.toString.call(v).slice(8, -1) as TaapType;
 }
 /**
  * Determine if argument is an `Array`.
@@ -13,7 +22,7 @@ export function callToString(v: any) {
  * @returns boolean
  */
 export function isArray<T = any>(val: any): val is Array<T> {
-  return callToString(val) === 'Array';
+  return getType(val) === 'Array';
 }
 
 /**
@@ -25,7 +34,7 @@ export function isArray<T = any>(val: any): val is Array<T> {
  * @returns boolean
  */
 export function isObject<T extends Record<string, any>>(val: any): val is T {
-  return callToString(val) === 'Object';
+  return getType(val) === 'Object';
 }
 
 /**
@@ -35,7 +44,7 @@ export function isObject<T extends Record<string, any>>(val: any): val is T {
  * @returns boolean
  */
 export function isString(val: any): val is string {
-  return callToString(val) === 'String';
+  return getType(val) === 'String';
 }
 
 /**
@@ -45,7 +54,7 @@ export function isString(val: any): val is string {
  * @returns boolean
  */
 export function isDate(val: any): val is Date {
-  return callToString(val) === 'Date';
+  return getType(val) === 'Date';
 }
 
 /**
@@ -55,7 +64,7 @@ export function isDate(val: any): val is Date {
  * @returns boolean
  */
 export function isRegExp(val: any): val is RegExp {
-  return callToString(val) === 'RegExp';
+  return getType(val) === 'RegExp';
 }
 
 /**
@@ -65,7 +74,7 @@ export function isRegExp(val: any): val is RegExp {
  * @returns boolean
  */
 export function isFunction<T = () => {}>(val: any): val is T {
-  return callToString(val) === 'Function';
+  return getType(val) === 'Function';
 }
 
 /**
@@ -75,7 +84,7 @@ export function isFunction<T = () => {}>(val: any): val is T {
  * @returns boolean
  */
 export function isBoolean(val: any): val is boolean {
-  return callToString(val) === 'Boolean';
+  return getType(val) === 'Boolean';
 }
 
 /**
@@ -85,7 +94,7 @@ export function isBoolean(val: any): val is boolean {
  * @returns boolean
  */
 export function isNumber(val: any): val is number {
-  return callToString(val) === 'Number';
+  return getType(val) === 'Number';
 }
 
 /**
@@ -95,7 +104,7 @@ export function isNumber(val: any): val is number {
  * @returns boolean
  */
 export function isNull(val: any): val is null {
-  return callToString(val) === 'Null';
+  return getType(val) === 'Null';
 }
 
 /**
@@ -105,5 +114,5 @@ export function isNull(val: any): val is null {
  * @returns boolean
  */
 export function isUndefined(val: any): val is undefined {
-  return callToString(val) === 'Undefined';
+  return getType(val) === 'Undefined';
 }
