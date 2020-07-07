@@ -1,3 +1,10 @@
+# [1.0.0-beta.9](https://github.com/schuchard/taap/compare/v1.0.0-beta.8...v1.0.0-beta.9) (2020-07-07)
+
+
+### Features
+
+* add TaapType type for getting type info ([37d2be5](https://github.com/schuchard/taap/commit/37d2be5aa2cf3daa497d58303265bd2cffef21f6))
+
 # [1.0.0-beta.8](https://github.com/schuchard/taap/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2020-07-07)
 
 
