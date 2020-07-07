@@ -2800,14 +2800,14 @@ img {
 			<p>Install dependency:</p>
 			<pre><code class="language-bash">npm i taap</code></pre>
 			<p>Import methods:</p>
-			<pre><code class="language-ts"><span class="hljs-keyword">import</span> { isArray } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;taap&#x27;</span>;
+			<pre><code class="language-ts">import { isArray } from &#x27;taap&#x27;;
 
-<span class="hljs-keyword">const</span> maybeArray: unknown = [];
+const maybeArray: unknown = [];
 
-<span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> maybeArray === <span class="hljs-string">&#x27;array&#x27;</span>) {
-  <span class="hljs-comment">// 🚫typeof [] === &#x27;object</span>
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isArray(maybeArray)) {
-  ✅ maybeArray.push(<span class="hljs-number">1</span>);
+if (typeof maybeArray === &#x27;array&#x27;) {
+  🚫 typeof [] !== &#x27;object
+} else if (isArray(maybeArray)) {
+  ✅ maybeArray.push(1);
 }</code></pre>
 			<p>Optionally supply a return type:</p>
 			<pre><code class="language-ts"><span class="hljs-keyword">import</span> { isArray } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;taap&#x27;</span>;
@@ -2879,7 +2879,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Taap<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"Array"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Object"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"String"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Date"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"RegExp"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Function"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Boolean"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Number"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Null"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Undefined"</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/schuchard/taap/blob/58533cf/src/taap.ts#L1">taap.ts:1</a></li>
+						<li>Defined in <a href="https://github.com/schuchard/taap/blob/d63be2d/src/taap.ts#L1">taap.ts:1</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2896,7 +2896,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/schuchard/taap/blob/58533cf/src/taap.ts#L13">taap.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/schuchard/taap/blob/d63be2d/src/taap.ts#L13">taap.ts:13</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2919,7 +2919,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/schuchard/taap/blob/58533cf/src/taap.ts#L41">taap.ts:41</a></li>
+								<li>Defined in <a href="https://github.com/schuchard/taap/blob/d63be2d/src/taap.ts#L41">taap.ts:41</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2970,7 +2970,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/schuchard/taap/blob/58533cf/src/taap.ts#L155">taap.ts:155</a></li>
+								<li>Defined in <a href="https://github.com/schuchard/taap/blob/d63be2d/src/taap.ts#L155">taap.ts:155</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3003,7 +3003,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/schuchard/taap/blob/58533cf/src/taap.ts#L124">taap.ts:124</a></li>
+								<li>Defined in <a href="https://github.com/schuchard/taap/blob/d63be2d/src/taap.ts#L124">taap.ts:124</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3036,7 +3036,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/schuchard/taap/blob/58533cf/src/taap.ts#L94">taap.ts:94</a></li>
+								<li>Defined in <a href="https://github.com/schuchard/taap/blob/d63be2d/src/taap.ts#L94">taap.ts:94</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3084,7 +3084,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/schuchard/taap/blob/58533cf/src/taap.ts#L184">taap.ts:184</a></li>
+								<li>Defined in <a href="https://github.com/schuchard/taap/blob/d63be2d/src/taap.ts#L184">taap.ts:184</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3117,7 +3117,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/schuchard/taap/blob/58533cf/src/taap.ts#L170">taap.ts:170</a></li>
+								<li>Defined in <a href="https://github.com/schuchard/taap/blob/d63be2d/src/taap.ts#L170">taap.ts:170</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3150,7 +3150,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/schuchard/taap/blob/58533cf/src/taap.ts#L68">taap.ts:68</a></li>
+								<li>Defined in <a href="https://github.com/schuchard/taap/blob/d63be2d/src/taap.ts#L68">taap.ts:68</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3200,7 +3200,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/schuchard/taap/blob/58533cf/src/taap.ts#L140">taap.ts:140</a></li>
+								<li>Defined in <a href="https://github.com/schuchard/taap/blob/d63be2d/src/taap.ts#L140">taap.ts:140</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3234,7 +3234,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/schuchard/taap/blob/58533cf/src/taap.ts#L109">taap.ts:109</a></li>
+								<li>Defined in <a href="https://github.com/schuchard/taap/blob/d63be2d/src/taap.ts#L109">taap.ts:109</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3267,7 +3267,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/schuchard/taap/blob/58533cf/src/taap.ts#L198">taap.ts:198</a></li>
+								<li>Defined in <a href="https://github.com/schuchard/taap/blob/d63be2d/src/taap.ts#L198">taap.ts:198</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
