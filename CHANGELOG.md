@@ -1,3 +1,10 @@
+# [1.0.0-beta.10](https://github.com/schuchard/taap/compare/v1.0.0-beta.9...v1.0.0-beta.10) (2020-07-07)
+
+
+### Features
+
+* **docs:** deploy docs site ([83f4ccc](https://github.com/schuchard/taap/commit/83f4ccc37201d5e70b8ea859373604a6c8c827ba))
+
 # [1.0.0-beta.9](https://github.com/schuchard/taap/compare/v1.0.0-beta.8...v1.0.0-beta.9) (2020-07-07)
 
 
