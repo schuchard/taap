@@ -27,15 +27,15 @@ jobs:
     runs-on: ubuntu-latest
     needs: release
     steps:
-      - name: Deploy docs
-        if:  contains(github.ref, 'master')
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2-beta
         with:
           node-version: 12
       - run: npm ci
       - run: npm run docs:deploy
+      - name: Deploy docs
       - uses: peaceiris/actions-gh-pages@v3.6.1
+        if: contains(github.ref, 'master')
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
