@@ -17,11 +17,11 @@ describe('isArray', () => {
   });
 
   it('should assert the type predicate and compile', () => {
-    const arr = [1] as unknown;
+    const maybeArray: unknown = [1];
 
-    if (isArray<number>(arr)) {
-      arr.push(1);
-      expect(arr[1]).toEqual(1);
+    if (isArray<number>(maybeArray)) {
+      maybeArray.push(1);
+      expect(maybeArray[1]).toEqual(1);
     }
 
     expect.assertions(1);
@@ -34,12 +34,12 @@ describe('isObject', () => {
   });
 
   it('should assert the type predicate and compile', () => {
-    const obj = { a: 1 } as unknown;
+    const maybeObject: unknown = { a: 1 };
 
-    if (isObject<Record<string, number>>(obj)) {
-      obj.b = 2;
-      expect(Object.keys(obj).map((v) => v)).toEqual(['a', 'b']);
-      expect(Object.values(obj).map((v) => v)).toEqual([1, 2]);
+    if (isObject<Record<string, number>>(maybeObject)) {
+      maybeObject.b = 2;
+      expect(Object.keys(maybeObject).map((v) => v)).toEqual(['a', 'b']);
+      expect(Object.values(maybeObject).map((v) => v)).toEqual([1, 2]);
     }
     expect.assertions(2);
   });
@@ -51,11 +51,11 @@ describe('isString', () => {
   });
 
   it('should assert the type predicate and compile', () => {
-    let str = 'a,b' as unknown;
+    let maybeString = 'a,b' as unknown;
 
-    if (isString(str)) {
-      str += ',c';
-      expect(str.split(',')).toEqual(['a', 'b', 'c']);
+    if (isString(maybeString)) {
+      maybeString += ',c';
+      expect(maybeString.split(',')).toEqual(['a', 'b', 'c']);
     }
     expect.assertions(1);
   });
@@ -67,11 +67,11 @@ describe('isDate', () => {
   });
 
   it('should assert the type predicate and compile', () => {
-    const date = new Date('August 19, 1975 23:15:30') as unknown;
+    const maybeDate: unknown = new Date('August 19, 1975 23:15:30');
 
-    if (isDate(date)) {
-      date.setFullYear(1969);
-      expect(date.toDateString()).toEqual('Tue Aug 19 1969');
+    if (isDate(maybeDate)) {
+      maybeDate.setFullYear(1969);
+      expect(maybeDate.toDateString()).toEqual('Tue Aug 19 1969');
     }
 
     expect.assertions(1);
@@ -84,12 +84,12 @@ describe('isRegExp', () => {
   });
 
   it('should assert the type predicate and compile', () => {
-    const regex = /\w+\s/g as unknown;
+    const maybeRegExp: unknown = /\w+\s/g;
 
-    if (isRegExp(regex)) {
+    if (isRegExp(maybeRegExp)) {
       const str = 'fee fi fo fum';
-      expect(str.match(regex)).toEqual(['fee ', 'fi ', 'fo ']);
-      expect(regex.test('fee fi fo fum')).toEqual(true);
+      expect(str.match(maybeRegExp)).toEqual(['fee ', 'fi ', 'fo ']);
+      expect(maybeRegExp.test('fee fi fo fum')).toEqual(true);
     }
 
     expect.assertions(2);
@@ -102,10 +102,10 @@ describe('isFunction', () => {
   });
 
   it('should assert the type predicate and compile', () => {
-    const func = ((x: any) => x) as unknown;
+    const maybeFunc: unknown = (x: any) => x;
 
-    if (isFunction<(x: number) => number>(func)) {
-      expect(func(42)).toEqual(42);
+    if (isFunction<(x: number) => number>(maybeFunc)) {
+      expect(maybeFunc(42)).toEqual(42);
     }
 
     expect.assertions(1);
@@ -118,10 +118,10 @@ describe('isBoolean', () => {
   });
 
   it('should assert the type predicate and compile', () => {
-    const bool = true as unknown;
+    const maybeBoolean: unknown = true;
 
-    if (isBoolean(bool) && bool === true) {
-      expect(bool).toBe(true);
+    if (isBoolean(maybeBoolean) && maybeBoolean === true) {
+      expect(maybeBoolean).toBe(true);
     }
 
     expect.assertions(1);
@@ -134,10 +134,10 @@ describe('isNumber', () => {
   });
 
   it('should assert the type predicate and compile', () => {
-    const num = 1 as unknown;
+    const maybeNumber: unknown = 1;
 
-    if (isNumber(num)) {
-      expect(num + 2).toEqual(3);
+    if (isNumber(maybeNumber)) {
+      expect(maybeNumber + 2).toEqual(3);
     }
 
     expect.assertions(1);
@@ -150,10 +150,10 @@ describe('isNull', () => {
   });
 
   it('should assert the type predicate and compile', () => {
-    const nullVal = null as unknown;
+    const maybeNull: unknown = null;
 
-    if (isNull(nullVal)) {
-      expect(nullVal).toEqual(null);
+    if (isNull(maybeNull)) {
+      expect(maybeNull).toEqual(null);
     }
 
     expect.assertions(1);
@@ -166,10 +166,10 @@ describe('isUndefined', () => {
   });
 
   it('should assert the type predicate and compile', () => {
-    const undefinedVal = undefined as unknown;
+    const maybeUndefined: unknown = undefined;
 
-    if (isUndefined(undefinedVal)) {
-      expect(undefinedVal).toEqual(undefined);
+    if (isUndefined(maybeUndefined)) {
+      expect(maybeUndefined).toEqual(undefined);
     }
 
     expect.assertions(1);
