@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/schuchard/taap/compare/v1.0.1...v1.0.2) (2020-07-07)
+
+
+### Bug Fixes
+
+* **ci:** docs deploy ([2022caa](https://github.com/schuchard/taap/commit/2022caa7ca9dfe731f9658cb9eeec3f714caf606))
+
 ## [1.0.1](https://github.com/schuchard/taap/compare/v1.0.0...v1.0.1) (2020-07-07)
 
 
