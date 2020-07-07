@@ -2,6 +2,12 @@
 
 A zero dependency Typescript type checking library that coerces unknown values.
 
+<h3 align="center">
+  <a href="https://stackblitz.com/edit/taap">
+  ⚡ Demo ⚡
+  </a>
+</h3>
+
 <p align="center">
   <a href="#badge">
     <img alt="github-workflows" src="https://github.com/schuchard/taap/workflows/Release/badge.svg">
@@ -25,6 +31,7 @@ A zero dependency Typescript type checking library that coerces unknown values.
     <img alt="npm next version" src="https://img.shields.io/npm/v/taap/beta.svg">
   </a>
 </p>
+
 
 ## 🛠 Getting Started
 
