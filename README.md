@@ -48,7 +48,7 @@ import { isArray } from 'taap';
 const maybeArray: unknown = [];
 
 if (typeof maybeArray === 'array') {
-  // 🚫typeof [] === 'object
+  🚫 typeof [] !== 'object
 } else if (isArray(maybeArray)) {
   ✅ maybeArray.push(1);
 }
