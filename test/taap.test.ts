@@ -9,7 +9,10 @@ import {
   isNumber,
   isNull,
   isUndefined,
+  getType,
 } from '../src/taap';
+
+const regExp = /\w+\s/g;
 
 describe('isArray', () => {
   it('should return a true if an Array', () => {
@@ -84,7 +87,7 @@ describe('isRegExp', () => {
   });
 
   it('should assert the type predicate and compile', () => {
-    const maybeRegExp: unknown = /\w+\s/g;
+    const maybeRegExp: unknown = regExp;
 
     if (isRegExp(maybeRegExp)) {
       const str = 'fee fi fo fum';
@@ -102,10 +105,10 @@ describe('isFunction', () => {
   });
 
   it('should assert the type predicate and compile', () => {
-    const maybeFunction: unknown = (x: any) => x;
+    const maybeFunction: unknown = (x: number) => x.toString();
 
-    if (isFunction<(x: number) => number>(maybeFunction)) {
-      expect(maybeFunction(42)).toEqual(42);
+    if (isFunction<(x: number) => string>(maybeFunction)) {
+      expect(maybeFunction(42)).toEqual('42');
     }
 
     expect.assertions(1);
@@ -120,7 +123,7 @@ describe('isBoolean', () => {
   it('should assert the type predicate and compile', () => {
     const maybeBoolean: unknown = true;
 
-    if (isBoolean(maybeBoolean) && maybeBoolean === true) {
+    if (isBoolean(maybeBoolean)) {
       expect(maybeBoolean).toBe(true);
     }
 
@@ -174,4 +177,31 @@ describe('isUndefined', () => {
 
     expect.assertions(1);
   });
+});
+
+describe('getType', () => {
+  test.each`
+    kind           | value
+    ${'Array'}     | ${[]}
+    ${'Array'}     | ${[1]}
+    ${'Array'}     | ${[false]}
+    ${'Object'}    | ${{}}
+    ${'Object'}    | ${{ a: 1 }}
+    ${'String'}    | ${''}
+    ${'String'}    | ${'taap'}
+    ${'Date'}      | ${new Date()}
+    ${'RegExp'}    | ${regExp}
+    ${'RegExp'}    | ${new RegExp('a')}
+    ${'Boolean'}   | ${true}
+    ${'Boolean'}   | ${false}
+    ${'Boolean'}   | ${!!1}
+    ${'Number'}    | ${1}
+    ${'Number'}    | ${0.4}
+    ${'Null'}      | ${null}
+    ${'Undefined'} | ${undefined}
+    ${'Function'}  | ${() => ({})}
+    ${'Function'} | ${function testFunc() {
+  return false;
+}}
+  `('returns $kind when given $value', ({ kind, value }) => expect(getType(value)).toEqual(kind));
 });
