@@ -13,9 +13,11 @@ jobs:
       - uses: actions/setup-node@v2-beta
         with:
           node-version: 12
-      - run: npm ci
-      - run: npm run test:prod
-      - run: npm run build
+      - name: Test
+        run: npm ci
+        run: npm run test:prod
+      - name: Build
+        run: npm run build
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -31,9 +33,9 @@ jobs:
       - uses: actions/setup-node@v2-beta
         with:
           node-version: 12
-      - run: npm ci
-      - run: npm run docs:deploy
       - name: Deploy docs
+        run: npm ci
+        run: npm run docs:deploy
       - uses: peaceiris/actions-gh-pages@v3.6.1
         if: contains(github.ref, 'master')
         with:
