@@ -1,6 +1,6 @@
 # Type Assertion And Predicate (`Taap`)
 
-A lightweight zero dependency Typescript type checking library that coerces unknown values. More concise and accurate than `typeof` checks or similar type checking methods.
+A lightweight zero dependency Typescript type checking library that coerces unknown value types. More concise and accurate than `typeof` checks or similar type checking methods.
 
 <h3 align="center">
   <a href="https://schuchard.github.io/taap/" target="_blank">📚 Docs<a>
