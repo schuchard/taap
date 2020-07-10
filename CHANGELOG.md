@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/schuchard/taap/compare/v1.1.0...v1.2.0) (2020-07-10)
+
+
+### Features
+
+* **docs:** update with link to repo ([1f527a2](https://github.com/schuchard/taap/commit/1f527a25ab5241b8c6bff633f79ce6ad9612d664))
+
 # [1.1.0](https://github.com/schuchard/taap/compare/v1.0.3...v1.1.0) (2020-07-07)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "taap",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A zero dependency Typescript type checking library that coerces unknown values.",
   "keywords": [
     "javascript",
