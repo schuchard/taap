@@ -202,6 +202,7 @@ describe('getType', () => {
     kind           | value
     ${'Array'}     | ${[]}
     ${'Array'}     | ${[1]}
+    ${'Array'}     | ${[{ a: 1 }]}
     ${'Array'}     | ${[false]}
     ${'Object'}    | ${{}}
     ${'Object'}    | ${{ a: 1 }}
@@ -216,6 +217,7 @@ describe('getType', () => {
     ${'Number'}    | ${1}
     ${'Number'}    | ${2_000}
     ${'Number'}    | ${0.4}
+    ${'Number'}    | ${-100}
     ${'Null'}      | ${null}
     ${'Undefined'} | ${undefined}
     ${'BigInt'}    | ${BigInt(9007199254740991)}

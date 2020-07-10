@@ -1,15 +1,17 @@
 # Type Assertion And Predicate (`Taap`)
 
-A zero dependency Typescript type checking library that coerces unknown values. More concise and accurate than `typeof` checks or other similar type checking methods.
+A lightweight zero dependency Typescript type checking library that coerces unknown values. More concise and accurate than `typeof` checks or similar type checking methods.
 
 <h3 align="center">
   <a href="https://schuchard.github.io/taap/" target="_blank">📚 Docs<a>
   &nbsp;
   <a href="https://stackblitz.com/edit/taap" target="_blank">⚡ Demo</a>
+  &nbsp;
+  <a href="https://github.com/schuchard/taap" target="_blank">💻 Repo</a>
 </h3>
 
 <p align="center">
-  <a href="#badge" target="_blank">
+  <a href="https://schuchard.github.io/taap/" target="_blank">
     <img alt="github-workflows" src="https://github.com/schuchard/taap/workflows/Release/badge.svg">
   </a>
   <a href="#badge" target="_blank">
@@ -34,13 +36,13 @@ A zero dependency Typescript type checking library that coerces unknown values. 
 
 ## 🛠 Getting Started
 
-Install dependency:
+#### Install dependency
 
 ```bash
 npm i taap
 ```
 
-Import methods:
+#### Import and use methods
 
 ```ts
 import { isArray } from 'taap';
@@ -50,11 +52,12 @@ const maybeArray: unknown = [];
 if (typeof maybeArray === 'array') {
   🚫 typeof [] === 'object'
 } else if (isArray(maybeArray)) {
+  // `maybeArray` is now of type: `any[]`
   ✅ maybeArray.push(1);
 }
 ```
 
-Optionally supply a return type:
+#### Optionally supply a return type
 
 ```ts
 import { isArray } from 'taap';
@@ -62,31 +65,32 @@ import { isArray } from 'taap';
 const maybeArray: unknown = [1, 2, 3];
 
 if (isArray<number>(maybeArray)) {
+  // `maybeArray` is now of type: `number[]`
   maybeArray.filter((x) => x > 1);
 }
 ```
 
 ## 🔭 Available Methods
 
-<a href="https://schuchard.github.io/taap/" target="_blank">📚Full documentation<a>
+### <a href="https://schuchard.github.io/taap/" target="_blank">📚Full documentation<a>
 
 Supports optional generic return type:
 
-- `isArray()`
-- `isObject()`
-- `isFunction()`
+- [`isArray()`](https://schuchard.github.io/taap/globals.html#isarray)
+- [`isObject()`](https://schuchard.github.io/taap/globals.html#isobject)
+- [`isFunction()`](https://schuchard.github.io/taap/globals.html#isfunction)
 
 Fixed return type:
 
-- `isString()`
-- `isDate()`
-- `isRegExp()`
-- `isBoolean()`
-- `isNumber()`
-- `isBigInt()`
-- `isNull()`
-- `isUndefined()`
+- [`isString()`](https://schuchard.github.io/taap/globals.html#isstring)
+- [`isDate()`](https://schuchard.github.io/taap/globals.html#isdate)
+- [`isRegExp()`](https://schuchard.github.io/taap/globals.html#isregexp)
+- [`isBoolean()`](https://schuchard.github.io/taap/globals.html#isboolean)
+- [`isNumber()`](https://schuchard.github.io/taap/globals.html#isnumber)
+- [`isBigInt()`](https://schuchard.github.io/taap/globals.html#isbigint)
+- [`isNull()`](https://schuchard.github.io/taap/globals.html#isnull)
+- [`isUndefined()`](https://schuchard.github.io/taap/globals.html#isundefined)
 
 Other:
 
-- `getType()`
+- [`getType()`](https://schuchard.github.io/taap/globals.html#gettype)
